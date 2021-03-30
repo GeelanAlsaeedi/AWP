@@ -18,6 +18,7 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
+	text-align: center;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -66,6 +67,7 @@ input::-moz-focus-inner {
 }
 
 input, select, textarea {
+	
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -82,6 +84,7 @@ input, select, textarea {
 
 		html, body {
 			min-width: 320px;
+			
 		}
 
 	}
@@ -140,13 +143,15 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
+		
+		
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
 	}
-
+/* social media */
 	a {
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -155,6 +160,7 @@ input, select, textarea {
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		color: inherit;
+		
 	}
 
 		a:hover {
@@ -172,6 +178,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2rem 0;
+		
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -190,12 +197,9 @@ input, select, textarea {
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 			border-bottom: solid 1px #ffffff;
-			width: -moz-max-content;
-			width: -webkit-max-content;
-			width: -ms-max-content;
-			width: max-content;
-			padding-bottom: 0.5rem;
-			margin: 0 0 2rem 0;
+			
+			padding:0rem 0rem 1rem 1rem;
+		text-align: center;
 		}
 
 	h1 {
@@ -266,6 +270,7 @@ input, select, textarea {
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
+	
 	}
 
 	pre {
@@ -303,7 +308,7 @@ input, select, textarea {
 /* Form */
 
 	form {
-		margin: 0 0 2rem 0;
+		margin: 0 0 2rem 3rem;
 	}
 
 		form > :last-child {
@@ -311,6 +316,7 @@ input, select, textarea {
 		}
 
 		form > .fields {
+			text-align: center;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -319,11 +325,12 @@ input, select, textarea {
 			-webkit-flex-wrap: wrap;
 			-ms-flex-wrap: wrap;
 			flex-wrap: wrap;
-			width: calc(100% + 3rem);
+			width: calc(100% + 0.15cm);
 			margin: -1.5rem 0 2rem -1.5rem;
 		}
 
 			form > .fields > .field {
+				
 				-moz-flex-grow: 0;
 				-webkit-flex-grow: 0;
 				-ms-flex-grow: 0;
@@ -391,6 +398,7 @@ input, select, textarea {
 	input[type="tel"],
 	select,
 	textarea {
+text-align: center;
 		-moz-appearance: none;
 		-webkit-appearance: none;
 		-ms-appearance: none;
@@ -417,6 +425,7 @@ input, select, textarea {
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
+			text-align: center;
 		}
 
 		input[type="text"]:focus,
