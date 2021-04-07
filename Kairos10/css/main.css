@@ -2040,6 +2040,7 @@ input::-moz-focus-inner {
  * # home
  *
  * ------------------------------------------------------------------- */
+ /* the background organization */
 .s-home {
   display: table;
   width: 100%;
@@ -2047,8 +2048,8 @@ input::-moz-focus-inner {
   background-color: transparent;
   position: relative;
 }
-
-.s-home::before {
+/* the transparent dark background layer */
+/* .s-home::before {
   display: block;
   content: "";
   position: absolute;
@@ -2058,7 +2059,7 @@ input::-moz-focus-inner {
   height: 100%;
   opacity: .8;
   background-color: #000000;
-}
+} */
 
 /* .s-home .shadow-overlay {
   position: absolute;
@@ -2086,7 +2087,7 @@ input::-moz-focus-inner {
   width: 100%;
   position: relative;
 }
-
+/* the big text */
 .home-content h1 {
   font-family: "Chivo", sans-serif;
   font-weight: 600;
@@ -2098,13 +2099,13 @@ input::-moz-focus-inner {
   padding-top: 3.2rem;
   position: relative;
 }
-
+/* the line above the big text */
 .home-content h1::before {
   display: block;
   content: "";
   height: 2px;
   width: 8rem;
-  background-color: #5b4f96;
+  background-color: red;
   position: absolute;
   left: 8px;
   top: 0;
@@ -2777,7 +2778,7 @@ html.no-csstransitions .home-content__main {
   padding-bottom: 16rem;
 }
 /* Video thingy  */
-.video-bg {
+/* .video-bg {
   z-index: 1;
   overflow: hidden;
   height: 62.4rem;
@@ -2787,9 +2788,9 @@ html.no-csstransitions .home-content__main {
   background-position: center top;
   background-size: cover;
   position: relative;
-}
+} */
 
-.video-bg .shadow-overlay {
+/* .video-bg .shadow-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -2797,22 +2798,22 @@ html.no-csstransitions .home-content__main {
   height: 100%;
   opacity: .85;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, black 100%);
-}
+} */
 
 
 /* -------------------------------------------------------------------
  * ## video button
  * ------------------------------------------------------------------- */
-.btn-video {
+/* .btn-video {
   display: inline-block;
   text-align: center;
   outline: none;
   position: absolute;
   top: 14%;
   left: 10%;
-}
+} */
 
-.video-icon {
+/* .video-icon {
   display: inline-block;
   height: 112px;
   width: 112px;
@@ -2829,13 +2830,12 @@ html.no-csstransitions .home-content__main {
 .btn-video:hover .video-icon {
   background-color: #5b4f96;
   background-image: url(../images/icons/icon-play.svg);
-}
+} */
 
 
-/* -------------------------------------------------------------------
- * ## stats
+/* ----- ## stats
  * ------------------------------------------------------------------- */
-.stats {
+/* .stats {
   width: 100%;
   padding: 0 11%;
   color: #ffffff;
@@ -2863,12 +2863,11 @@ html.no-csstransitions .home-content__main {
   font-size: 6.8rem;
   margin-right: 2rem;
 }
+ */
 
-
-/* -------------------------------------------------------------------
- * ## process
+/* ------## process
  * ------------------------------------------------------------------- */
-.process-wrap {
+/* .process-wrap {
   margin-top: 12rem;
 }
 
@@ -2948,7 +2947,7 @@ html.no-csstransitions .home-content__main {
   top: -12px;
   left: -27px;
 }
-
+ */
 
 /* -------------------------------------------------------------------
  * responsive:
