@@ -10,10 +10,7 @@
 * # header styles
 *
 * ------------------------------------------------------------------- */
-body{
-background-image:url('images/thumbs/classic2.jpg')
 
-}
 .s-header {
 z-index: 600;
 width: 100%;
@@ -405,7 +402,7 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
-	
+
 }
 
 mark {
@@ -436,10 +433,10 @@ input, select, textarea {
 	}
 
 	body {
-		background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
-		background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/ClassicPainting.jpg");
+		background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/ClassicPainting.jpg");
+		background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/ClassicPainting.jpg");
+		background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/ClassicPainting.jpg");
 		background-position: top left, bottom left, auto;
 		background-size: auto, 100% 100%, cover;
 		background-attachment: fixed;
@@ -473,10 +470,15 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			body {
+				background-image: url("images/overlay.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
+				background-image: url("images/overlay.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
+				background-image: url("images/overlay.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
+				background-image: url("images/overlay.png"), linear-gradient(top, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0.65)), url("../../images/bg.jpg");
 				background-attachment: scroll;
 				background-size: auto, 100% 100%, 250% auto;
 				background-repeat: repeat, no-repeat, no-repeat;
 				background-position: top left, bottom left, 50% 0%;
+
 			}
 
 		}
@@ -535,7 +537,7 @@ input, select, textarea {
 /*text of word (artist)*/
 	strong, b {
 		color: #966c3b;
-		
+
 		font-weight: 600;
 	}
 
@@ -722,10 +724,18 @@ input, select, textarea {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
+
 		}
 /*can drop it غيرت اللون لاصفر وما تغير ولا شي */
 			#main .items > :last-child {
 				border-right: solid 10px #f0c929;
+			}
+
+			.itemss{
+				background: transparent ;
+				font-size: 70px;
+				font-family:italic;
+				text-align:center;
 			}
 /*ترتيب المربعات وكل شي لمن حذفتو دخل ببعض */
 		#main .item {
@@ -748,10 +758,12 @@ input, select, textarea {
 				width: 20em;
 			}
 
+/*can drop it
 			#main .item.span-2 {
 				width: 30em;
-			}
 
+			}
+*/
 			#main .item.span-3 {
 				width: 40em;
 			}
@@ -776,7 +788,7 @@ input, select, textarea {
 			}
                    /* artist name   */
 				#main .item.intro h1 {
-					
+
 					font-size: 3em;
 					line-height: 1em;
 				}
@@ -876,10 +888,11 @@ input, select, textarea {
 					transition-delay: 2s;
 				}
 
-		
+
 
 			body.is-preload #main .item.thumb img {
 				opacity: 0;
+
 			}
 
 		@media screen and (max-width: 1680px) {
@@ -925,7 +938,7 @@ input, select, textarea {
 					#main .items > :last-child {
 						border-right: 0;
 					}
-/*can drop it  577 to 607*/ 
+/*can drop it  577 to 607*/
 				#main .item {
 					-moz-flex-grow: 1;
 					-webkit-flex-grow: 1;
@@ -1103,7 +1116,7 @@ input, select, textarea {
 			/*سٌمك الخط الاسود*/
 			line-height: 60px;
 			text-align: center;
-			
+
 			font-size: 2.25em;
 			color: #c2b092;
 		}
