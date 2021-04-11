@@ -39,7 +39,7 @@
 				<ul>
 					<!-- Change this to explore page -->
 					<li><a href="Kairos10/ProfilePage.html">Profile</a></li>
-					<li><a href="explore.html">Explore</a></li>
+					<li><a href="explore.php">Explore</a></li>
 					<li><a href="#SignIn">Sign In</a></li>
 					<li><a href="#SginUp">Sign Up</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
@@ -115,8 +115,8 @@
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input style=" margin-left: 180px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
-						<div id="message">hello</div>
+						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
+						<div id="message" style="padding-left: 3rem;">hello</div>
 						<?php
 						   if(isset($_POST['sign_up'])){
 								  $user_name=$_POST['user_name'];
