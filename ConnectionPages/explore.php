@@ -40,9 +40,9 @@ font-family: Fantasy;
 <nav class="header-nav-wrap">
 <ul class="header-main-nav">
 
-<li><a class="smoothscroll2" href="explore.html" title="about">EXPLORE</a></li>
-<li><a class="smoothscroll3" href="ProfilePage.html" title="features">PROFILE</a></li>
-<li class="smoothscroll3"><a href="index.php" title="Home">SIGN OUT</a></li>
+<li><a class="smoothscroll2" href="explore.html" title="explore">EXPLORE</a></li>
+<li><a class="smoothscroll3" href="../Kairos10/ProfilePage.html" title="Profile">PROFILE</a></li>
+<li><a class="smoothscroll3" href="index.php" title="signout">SIGN OUT</a></li>
 </ul>
 
 </nav> <!-- end header-nav-wrap -->
