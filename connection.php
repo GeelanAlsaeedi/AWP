@@ -1,6 +1,6 @@
 	<?php
 	// Attempt to connect to MySQL and print out messages.
-	if ($dbc = mysqli_connect('localhost', 'root',''))
+	if ($dbc = mysqli_connect('localhost', 'root','00000000'))
 	{
 	 print'<p>Successfully connected to MySQL.</p>';
 	 
