@@ -59,7 +59,131 @@
  *    ## go to top
  *
  * =================================================================== */
+ .row > .column {
+   padding: 0 8px;
+ }
 
+ .row:after {
+   content: "";
+   display: table;
+   clear: both;
+ }
+
+ /* Create four equal columns that floats next to eachother */
+ .column {
+   float: left;
+   width: 25%;
+ }
+
+ /* The Modal (background) */
+ .modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   padding-top: 100px;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   background-color: black;
+ }
+
+ /* Modal Content */
+ .modal-content {
+   position: relative;
+   background-color: #fefefe;
+   margin: auto;
+   padding: 0;
+   width: 90%;
+   max-width: 1200px;
+ }
+
+ /* The Close Button */
+ .close {
+   color: white;
+   position: absolute;
+   top: 10px;
+   right: 25px;
+   font-size: 35px;
+   font-weight: bold;
+ }
+
+ .close:hover,
+ .close:focus {
+   color: #999;
+   text-decoration: none;
+   cursor: pointer;
+ }
+
+ /* Hide the slides by default */
+ .mySlides {
+   display: none;
+ }
+
+ /* Next & previous buttons */
+ .prev,
+ .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   padding: 16px;
+   margin-top: -50px;
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+   -webkit-user-select: none;
+ }
+
+ /* Position the "next button" to the right */
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+
+ /* On hover, add a black background color with a little bit see-through */
+ .prev:hover,
+ .next:hover {
+   background-color: rgba(0, 0, 0, 0.8);
+ }
+
+ /* Number text (1/3 etc) */
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+
+ /* Caption text */
+ .caption-container {
+   text-align: center;
+   background-color: black;
+   padding: 2px 16px;
+   color: white;
+ }
+
+ img.demo {
+   opacity: 0.6;
+ }
+
+ .active,
+ .demo:hover {
+   opacity: 1;
+ }
+
+ img.hover-shadow {
+   transition: 0.3s;
+ }
+
+ .hover-shadow:hover {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
 
 
 /* ===================================================================
@@ -76,12 +200,7 @@ html {
   }
 
 }
-.ellipse{
-    background-color: #45597e;
-    height: 100px;
-    width: 150px;
-    border-radius: 50%;
-}
+
 
 html,
 body {
@@ -1014,8 +1133,8 @@ button.btn--primary,
 input[type="submit"].btn--primary,
 input[type="reset"].btn--primary,
 input[type="button"].btn--primary {
-  background: #5b4f96;
-  border-color: #5b4f96;
+  background: rgb(80,14,14);
+  border-color: rgb(80,14,14);
   color: #ffffff;
 }
 
@@ -1029,8 +1148,8 @@ button.btn--primary:focus,
 input[type="submit"].btn--primary:focus,
 input[type="reset"].btn--primary:focus,
 input[type="button"].btn--primary:focus {
-  background: #514686;
-  border-color: #514686;
+  background: rgb(80,14,14);
+  border-color: rgb(80,14,14);
 }
 
 /* button modifiers
@@ -1737,7 +1856,7 @@ input::-moz-focus-inner {
 }
 
 .header-logo img {
-  width: 100px;
+  width: 10rem;
   /* height: 36px; */
 }
 
@@ -2089,7 +2208,7 @@ input::-moz-focus-inner {
   z-index: 4;
   display: table-cell;
   vertical-align: top;
-  padding-top: 24.8rem;
+  padding-top: 15.8rem;
   width: 100%;
   position: relative;
 }
@@ -2114,7 +2233,7 @@ input::-moz-focus-inner {
   background-color: rgb(80,14,14);
   position: absolute;
   left: 8px;
-  top: 0;
+  top: 15rem;
 }
 
 .home-content h3 {
@@ -2144,6 +2263,7 @@ input::-moz-focus-inner {
   position: absolute;
   right: 0;
   top: 0;
+  padding-top: 4.3rem;
 }
 
 .home-content__right img {
@@ -2157,6 +2277,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .home-content__btn-wrap {
   margin-top: 7.2rem;
+  padding-top: 5rem;
 }
 
 .home-content__btn-wrap .home-content__btn {

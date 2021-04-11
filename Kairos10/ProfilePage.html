@@ -68,13 +68,13 @@
     <div class="row">
       <div class="header-logo">
         <a class="site-logo" href="index.html">
-          <img src="images/LINEARTLOGO.png" alt="Homepage">
+          <img src="../LINE ART LOGO 2.png" alt="Homepage">
         </a>
       </div>
 
       <nav class="header-nav-wrap mobile">
         <ul class="header-main-nav">
-          <li class=""><a href="../index.html" title="HOME">Home</a></li>
+          <li class=""><a href="../ConnectionPages/index.html" title="HOME">Home</a></li>
           <li><a href="" title="Explpore">Explore</a></li>
           <li><a href="" title="MyProfile">Profile</a></li>
           <!-- <li><a href="" title="pricing">Pricing</a></li>
@@ -104,16 +104,85 @@
 
         <div class="home-content__left">
           <h1>
-            Geelan's  Profile
+            Geelan's Profile
           </h1>
 
           <div class="home-content__btn-wrap">
+            <!-- Images used to open the lightbox -->
+            <div class="row">
+              <div class="column">
+                <img src="images/avatars/user-01.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+              </div>
+              <div class="column">
+                <img src="images/avatars/user-02.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+              </div>
+              <div class="column">
+                <img src="images/avatars/user-03.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+              </div>
+              <div class="column">
+                <img src="images/avatars/user-04.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+              </div>
+            </div>
 
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+              <span class="close cursor" onclick="closeModal()">&times;</span>
+              <div class="modal-content">
+
+                <div class="mySlides">
+                  <div class="numbertext">1 / 4</div>
+                  <img src="img1_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">2 / 4</div>
+                  <img src="img2_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">3 / 4</div>
+                  <img src="img3_wide.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="img4_wide.jpg" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls -->
+                <div class="column">
+                  <img class="demo" src="img1.jpg" onclick="currentSlide(1)" alt="Nature">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="img2.jpg" onclick="currentSlide(2)" alt="Snow">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="img3.jpg" onclick="currentSlide(3)" alt="Mountains">
+                </div>
+
+                <div class="column">
+                  <img class="demo" src="img4.jpg" onclick="currentSlide(4)" alt="Lights">
+                </div>
+              </div>
+            </div>
           </div>
         </div> <!-- end home-content__left-->
 
         <div class="home-content__right">
-          <div class="eclipse"></div>
+          <a href="#download" class="btn btn--primary home-content__btn smoothscroll">
+            Upload Photos
+          </a>
         </div> <!-- end home-content__right -->
 
       </div> <!-- end home-content__main -->
