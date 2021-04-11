@@ -94,15 +94,15 @@
 				<form method="post" action="index.php" >
 					<div class="fields">
 					<div class="field">
-							<h1 style="font-size:100%; margin-top: 30px; font-family: "Source Sans Pro' 5 Free;">Username</h1>
+							<h1 style="font-size:100%;">Username</h1>
 							<input type="text" id="username" name="user_name">
 						</div>
 						<div class="field">
-							<h1 style="font-size:100%; margin-top: 30px; font-family: "Source Sans Pro' 5 Free;">First name</h1>
+							<h1 style="font-size:100%;">First name</h1>
 							<input type="text" id="first_name" name="first_name">
 						</div>
 						<div class="field">
-							<h1 style="font-size:100%; font-family: 'Source Sans Pro" 5 Free';">Email</h1>
+							<h1 style="font-size:100%;">Email</h1>
 							<input type="text" id="email" name="email">
 						</div>
 						<div class="field">
@@ -116,6 +116,7 @@
 					</div>
 					<ul class="actions">
 						<li><input style=" margin-left: 180px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
+						<div id="message">hello</div>
 						<?php
 						   if(isset($_POST['sign_up'])){
 								  $user_name=$_POST['user_name'];

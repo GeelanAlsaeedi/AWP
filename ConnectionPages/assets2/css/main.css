@@ -67,7 +67,7 @@ input::-moz-focus-inner {
 }
 
 input, select, textarea {
-	
+
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-ms-appearance: none;
@@ -84,7 +84,7 @@ input, select, textarea {
 
 		html, body {
 			min-width: 320px;
-			
+
 		}
 
 	}
@@ -143,8 +143,8 @@ input, select, textarea {
 		}
 
 	body, input, select, textarea {
-		
-		
+
+
 		color: #ffffff;
 		font-family: "Source Sans Pro", sans-serif;
 		font-weight: 300;
@@ -160,7 +160,7 @@ input, select, textarea {
 		border-bottom: dotted 1px rgba(255, 255, 255, 0.5);
 		text-decoration: none;
 		color: inherit;
-		
+
 	}
 
 		a:hover {
@@ -178,7 +178,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2rem 0;
-		
+
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -197,7 +197,7 @@ input, select, textarea {
 
 		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
 			border-bottom: solid 1px #ffffff;
-			
+
 			padding:0rem 0rem 1rem 1rem;
 		text-align: center;
 		}
@@ -270,7 +270,7 @@ input, select, textarea {
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
-	
+
 	}
 
 	pre {
@@ -328,9 +328,12 @@ input, select, textarea {
 			width: calc(100% + 0.15cm);
 			margin: -1.5rem 0 2rem -1.5rem;
 		}
-
+		form > .fields > .field > h3{
+			font-size:10%;
+			margin-top: 30px;
+			font-family: 'Source Sans Pro' 5 Free;
+		}
 			form > .fields > .field {
-				
 				-moz-flex-grow: 0;
 				-webkit-flex-grow: 0;
 				-ms-flex-grow: 0;

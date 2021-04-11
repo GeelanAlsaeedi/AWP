@@ -153,6 +153,7 @@ transform: rotate(225deg);
 * ## navigation
 * ------------------------------------------------------------------- */
 .header-nav-wrap {
+
 font-family: "Nunito Sans", sans-serif;
 font-weight: 600;
 padding-left: 180px;
@@ -177,9 +178,11 @@ margin-right: 1.6rem;
 .header-nav-wrap .header-main-nav li a {
 display: block;
 line-height: 78px;
-color: Black;
+color: white;
 outline: none;
 position: relative;
+font-family: Fantasy;
+
 }
 
 .header-nav-wrap .header-main-nav li a:hover,
@@ -187,9 +190,6 @@ position: relative;
 color: black;
 }
 
-.header-nav-wrap .header-main-nav li.current a {
-color: black;
-}
 
 .header-nav-wrap .header-cta {
 -webkit-transform: translate3d(0, -50%, 0);
@@ -258,6 +258,78 @@ display: none;
 
 }
 
+@media only screen and (max-width:800px) {
+.s-header {
+background-color: #0e1113;
+position: fixed;
+top: 0;
+}
+
+.s-header > .row {
+width: 100%;
+padding: 0 !important;
+}
+
+.header-logo {
+margin: 8px 0 0 0;
+left: 44px;
+}
+
+.header-nav-wrap {
+display: none;
+height: auto;
+width: 100%;
+background-color: #0e1113;
+padding: 64px 44px 72px;
+text-align: left;
+position: absolute;
+top: 78px;
+}
+
+.header-nav-wrap .header-main-nav {
+display: block;
+font-size: 12px;
+padding-left: 0;
+margin: 0;
+height: auto;
+border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.header-nav-wrap .header-main-nav li {
+display: block;
+margin: 0;
+padding: 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.header-nav-wrap .header-main-nav li a {
+padding: 18px 0;
+line-height: 18px;
+}
+
+.header-nav-wrap .header-cta {
+display: block;
+position: static;
+-webkit-transform: translate3d(0, 0, 0);
+-ms-transform: translate3d(0, 0, 0);
+transform: translate3d(0, 0, 0);
+margin-top: 4.8rem;
+}
+
+.header-nav-wrap .header-cta__btn {
+display: block;
+font-size: 1.2rem;
+height: 5.2rem !important;
+line-height: 4.8rem !important;
+width: 100%;
+text-align: center;
+}
+
+.header-menu-toggle {
+display: block;
+}
+
+}
 @media only screen and (max-width:800px) {
 .s-header {
 background-color: #0e1113;
