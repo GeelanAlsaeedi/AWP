@@ -76,14 +76,33 @@
 			<article id="SignIn">
 			<h2 class="major">Sign in</h2>
 				<form style=" margin-left: 0px;">
-					<label style="font-size:100%;" for="fname">First Name</label>
-					<input type="text" id="fname" name="fname">
+					<label style="font-size:100%;" for="userName">User Name</label>
+					<input type="text" id="userName" name="userName">
 					<label style=" margin-top: 20px; font-size:100%;" for="lname">Password</label>
 					<input type="password" id="password" name="password">
 					</br>
 					 <input type="checkbox" id="Remember" name="Remember" value="Remember">
   <label for="vehicle1"> Remember Me</label><br>
-					<input style=" font-size:100%; margin-top: 30px;" type="submit" value="Sign In" class="primary" />
+					<input style=" font-size:100%; margin-top: 30px;" type="submit" value="Sign In"  name="sign_in" class="primary" />
+					<?php
+				/*	if (isset($_POST['sign_in'])){
+
+						if((!empty($_POST['userName'])) && (!empty($_POST['password']))){
+							$userName=$_POST['userName'];
+							$password=$_POST['password'];
+							$query="SELECT * FROM artist_info WHERE user_name='$userName' AND password='$password'";
+
+							if (@mysqli_query($dbc,$query)) {
+								print '<p>Your account created successfaully!</p>';
+							} else {
+								print '<p >fill all the required fields<b>'.mysqli_error($dbc).'</b>
+								<p>The query being run was: '.$query.'</p>';
+							}
+						}else{
+							print'<p> Please fill all the required fieleds</p>';
+						}
+				  }*/
+				?>
 				</form>
 
 			</article>
@@ -91,7 +110,7 @@
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
 				<h2 class="major">Sign up</h2>
-				<form method="post" action="index.php" onsubmit= "return ValidateSubmit();" >
+				<form method="post" action="index.php" >
 					<div class="fields">
 					<div class="field">
 							<h1 style="font-size:100%;">Username</h1>
@@ -111,11 +130,11 @@
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Re-type Password</h1>
-							<input type="password" id="confirm_password" name="confirm">
+							<input type="password" id="password" name="confirm">
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" onclick="ValidateSubmit()" name="sign_up" class="primary" /></li>
+						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
 						<div id="message" style="padding-left: 3rem;">hello</div>
 						<?php
 						   if(isset($_POST['sign_up'])){
@@ -127,13 +146,11 @@
 
 									if (@mysqli_query($dbc,$query)) {
 					 					print '<p>Your account created successfaully!</p>';
+					 				} else {
+					 					print '<p >fill all the required fields<b>'.mysqli_error($dbc).'</b>
+					 					<p>The query being run was: '.$query.'</p>';
 					 				}
-									//  else {
-					 				// 	print '<p >fill all the required fields<b>'.mysqli_error($dbc).'</b>
-					 				// 	<p>The query being run was: '.$query.'</p>';
-					 				// }
 					 			}
-								 mysqli_close($dbc); // Close the connection.
 						?>
 					</ul>
 				</form>
