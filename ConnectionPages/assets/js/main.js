@@ -3,6 +3,50 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+// function ValidateSubmit()//vlidate the feedback Function
+// {
+//   //get all the variables from the html file by thier ID
+//   var username = document.getElementById("username").value;
+//   var fname = document.getElementById("first_name").value;
+//   var email = document.getElementById("email").value;
+//   var Subject = document.getElementById("password").value;
+//   if(name.length === 0)//check if the nameField is not empty
+//   {
+//     document.getElementById("MSG").innerHTML = "Fill in the First Name" ;
+//     return false;
+//   }
+//   if(Lastname.length === 0)//check if the LastName is not empty
+//   {
+//     document.getElementById("MSG").innerHTML = "Fill in the Last Name" ;
+//     return false;
+//   }
+//   if(email.length === 0)//check if the email is not empty
+//   {
+//     document.getElementById("MSG").innerHTML = "Fill in the Email" ;
+//     return false;
+//   }
+//   if(!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/))//check if the email format
+//   {
+//     document.getElementById("MSG").innerHTML = "Invalid Email Address" ;
+//     return false;
+//   }
+//   if (Subject.length === 0)//check if the Subject textfield is not empty
+//   {
+//     document.getElementById("MSG").innerHTML = "what is the Subject of your message" ;
+//     return false;
+//   }
+//   if (firstmessage.length === 0)//check if the textarea is not empty
+//   {
+//     document.getElementById("MSG").innerHTML = "Tell us Your Message" ;
+//     return false;
+//   }
+//   else
+//  {
+//   /* document.getElementById("MSG").innerHTML = "your message has been sent" ; */
+//   return window.alert("Feedback sent succesfully");
+//
+//   }
+// }
 
 (function($) {
 
