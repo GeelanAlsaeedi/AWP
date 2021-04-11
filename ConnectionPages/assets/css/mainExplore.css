@@ -61,6 +61,7 @@ width: 200px;
 height: 200px;
 }
 .smoothscroll1 , .smoothscroll2 , .smoothscroll3 , .smoothscroll4 , .smoothscroll5{
+
 text-decoration: none;
 
 }
@@ -157,6 +158,7 @@ transform: rotate(225deg);
 * ## navigation
 * ------------------------------------------------------------------- */
 .header-nav-wrap {
+
 font-family: "Nunito Sans", sans-serif;
 font-weight: 600;
 padding-left: 180px;
@@ -184,6 +186,8 @@ line-height: 78px;
 color: white;
 outline: none;
 position: relative;
+font-family: Fantasy;
+
 }
 
 .header-nav-wrap .header-main-nav li a:hover,
@@ -527,8 +531,11 @@ input, select, textarea {
 		}
 /*color pf name pastiont لون الخط حق اسم اللوحة*/
 	h2, h3, h4, h5, h6 {
-		font-weight: 400;
 		color: white;
+		font-family: Fantasy;
+
+		font-weight: 400;
+
 		letter-spacing: -0.05em;
 	}
 /*text of word (artist)*/
