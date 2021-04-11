@@ -91,7 +91,7 @@
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
 				<h2 class="major">Sign up</h2>
-				<form method="post" action="index.php" >
+				<form method="post" action="index.php" onsubmit= "return ValidateSubmit();" >
 					<div class="fields">
 					<div class="field">
 							<h1 style="font-size:100%;">Username</h1>
@@ -111,11 +111,11 @@
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Re-type Password</h1>
-							<input type="password" id="password" name="confirm">
+							<input type="password" id="confirm_password" name="confirm">
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
+						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" onclick="ValidateSubmit()" name="sign_up" class="primary" /></li>
 						<div id="message" style="padding-left: 3rem;">hello</div>
 						<?php
 						   if(isset($_POST['sign_up'])){
@@ -127,10 +127,11 @@
 
 									if (@mysqli_query($dbc,$query)) {
 					 					print '<p>Your account created successfaully!</p>';
-					 				} else {
-					 					print '<p >fill all the required fields<b>'.mysqli_error($dbc).'</b>
-					 					<p>The query being run was: '.$query.'</p>';
 					 				}
+									//  else {
+					 				// 	print '<p >fill all the required fields<b>'.mysqli_error($dbc).'</b>
+					 				// 	<p>The query being run was: '.$query.'</p>';
+					 				// }
 					 			}
 								 mysqli_close($dbc); // Close the connection.
 						?>
