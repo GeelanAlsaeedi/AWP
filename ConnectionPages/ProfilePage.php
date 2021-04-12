@@ -1,3 +1,11 @@
+<?php
+
+ini_set('display_errors',1);
+error_reporting(E_ALL & ~E_NOTICE);
+
+session_start();
+?>
+
 <html class="js svg audio canvas cssremunit csscalc cssgradients supports no-touchevents video cssanimations cssfilters flexbox flexboxlegacy no-flexboxtweener flexwrap csstransforms csstransforms3d csstransitions backgroundblendmode ss-loaded"
   lang="en" style="" data-useragent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36">
 
