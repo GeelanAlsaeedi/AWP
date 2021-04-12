@@ -1,3 +1,8 @@
+<?php
+   include'../connection.php';
+   ini_set('display_errors',1);
+   error_reporting(E_ALL & ~E_NOTICE);
+  ?>
 <!DOCTYPE HTML>
 <!--
 	Dimensionnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn by HTML5 UP
@@ -19,8 +24,8 @@
 
 <body class="is-preload">
 	<?php
-   include'../connection.php';
-  ?>
+	$ran="";
+	?>
 	<!-- Wrapper -->
 	<div id="wrapper">
 
@@ -39,7 +44,7 @@
 				<ul>
 					<!-- Change this to explore page -->
 					<li><a href="Kairos10/ProfilePage.html">Profile</a></li>
-					<li><a href="explore.html">Explore</a></li>
+					<li><a href="explore.php">Explore</a></li>
 					<li><a href="#SignIn">Sign In</a></li>
 					<li><a href="#SginUp">Sign Up</a></li>
 					<!--<li><a href="#elements">Elements</a></li>-->
@@ -75,17 +80,18 @@
 
 			<article id="SignIn">
 			<h2 class="major">Sign in</h2>
-				<form style=" margin-left: 0px;">
-					<label style="font-size:100%;" for="fname">First Name</label>
-					<input type="text" id="fname" name="fname">
+				<form style=" margin-left: 0px;" action="login.php" method="post">
+					<label style="font-size:100%;" for="userName">User Name</label>
+					<input type="text" id="userName" name="userName">
 					<label style=" margin-top: 20px; font-size:100%;" for="lname">Password</label>
 					<input type="password" id="password" name="password">
 					</br>
 					 <input type="checkbox" id="Remember" name="Remember" value="Remember">
   <label for="vehicle1"> Remember Me</label><br>
-					<input style=" font-size:100%; margin-top: 30px;" type="submit" value="Sign In" class="primary" />
+					<input style=" font-size:100%; margin-top: 30px;" type="submit" value="Sign In"  name="sign_in" class="primary" />
+					
 				</form>
-
+				
 			</article>
 
 			<!-- Sign up was SginUp -->
@@ -115,15 +121,15 @@
 						</div>
 					</div>
 					<ul class="actions">
-						<li><input style=" margin-left: 180px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
-						<div id="message">hello</div>
+						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
+						<div id="message" style="padding-left: 3rem;">hello</div>
 						<?php
 						   if(isset($_POST['sign_up'])){
 								  $user_name=$_POST['user_name'];
 								  $first_name=$_POST['first_name'];
 								  $email=$_POST['email'];
 								  $pass=$_POST['password'];
-								  $query="INSERT INTO artist_info(user_name, first_name ,email, password, paths) VALUES('$user_name','$first_name','$email','$pass',' ')";
+								  $query="INSERT INTO artist_info(user_name, first_name ,email, password, paths) VALUES('$user_name','$first_name','$email','$pass','ran ')";
 
 									if (@mysqli_query($dbc,$query)) {
 					 					print '<p>Your account created successfaully!</p>';
@@ -132,7 +138,6 @@
 					 					<p>The query being run was: '.$query.'</p>';
 					 				}
 					 			}
-								 mysqli_close($dbc); // Close the connection.
 						?>
 					</ul>
 				</form>
