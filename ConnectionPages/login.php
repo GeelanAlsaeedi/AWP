@@ -35,5 +35,4 @@ error_reporting(E_ALL & ~E_NOTICE);
 			print'<p> Please fill all the required fieleds</p>';
 		}
 	}
-
 ?>

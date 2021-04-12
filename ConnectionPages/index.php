@@ -109,7 +109,7 @@
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Email</h1>
-							<input type="text" id="email" name="email">
+							<input type="email" id="email" name="email">
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Password</h1>
