@@ -111,6 +111,7 @@ session_start();
       <div class="row home-content__main">
 
         <div class="home-content__left">
+          <!-- recive the user name from the index.php page  -->
           <h1 class="username">
           <?php
           	$userName=$_POST['userName'];
