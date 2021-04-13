@@ -111,8 +111,12 @@ session_start();
       <div class="row home-content__main">
 
         <div class="home-content__left">
-          <h1>
-            Geelan's Profile
+          <h1 class="username">
+          <?php
+          	$userName=$_POST['userName'];
+            echo $userName;
+           ?>
+            's Profile
           </h1>
 
           <div class="home-content__btn-wrap">
