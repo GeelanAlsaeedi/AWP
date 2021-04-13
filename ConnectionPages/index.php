@@ -135,7 +135,7 @@
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
 				<h2 class="major">Sign up</h2>
-                  <form method="post" action="" name="registration">
+                  <form method="post" action="index.php#SginUp" name="registration">
         	<div class="fields">
 					<div class="field">
 							<h1 style="font-size:100%;">Username</h1>
