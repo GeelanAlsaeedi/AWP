@@ -20,6 +20,10 @@
 	<noscript>
 		<link rel="stylesheet" href="assets2/css/noscript.css" />
 	</noscript>
+  <script src="C:/Users/Geela/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="C:/Users/Geela/bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="C:/AppServ/www/AWP/ConnectionPages/assets2/js/form-validation.js"></script>
+
 </head>
 
 <body class="is-preload">
@@ -43,7 +47,7 @@
 			<nav>
 				<ul>
 					<!-- Change this to explore page -->
-					<li><a href="Kairos10/ProfilePage.html">Profile</a></li>
+					<li><a href="ProfilePage.php">Profile</a></li>
 					<li><a href="explore.php">Explore</a></li>
 					<li><a href="#SignIn">Sign In</a></li>
 					<li><a href="#SginUp">Sign Up</a></li>
@@ -56,7 +60,7 @@
 		<div id="main">
 
 			<!-- Intro -->
-			<article id="intro">
+			<!-- <article id="intro">
 				<h2 class="major">Intro</h2>
 				<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
 				<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus
@@ -64,17 +68,17 @@
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam
 					venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant
 					morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-			</article>
+			</article> -->
 
 			<!-- Work -->
-			<article id="work">
+			<!-- <article id="work">
 				<h2 class="major">Work</h2>
 				<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 				<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.
 				</p>
 				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque
 					lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-			</article>
+			</article> -->
 
 			<!-- SignIn -->
 
@@ -87,64 +91,84 @@
 					<input type="password" id="password" name="password">
 					</br>
 					 <input type="checkbox" id="Remember" name="Remember" value="Remember">
-  <label for="vehicle1"> Remember Me</label><br>
+           <label for="vehicle1"> Remember Me</label><br>
 					<input style=" font-size:100%; margin-top: 30px;" type="submit" value="Sign In"  name="sign_in" class="primary" />
-					
 				</form>
-				
 			</article>
 
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
 				<h2 class="major">Sign up</h2>
-				<form method="post" action="index.php" >
-					<div class="fields">
+                  <form method="post" action="" name="registration">
+        	<div class="fields">
 					<div class="field">
 							<h1 style="font-size:100%;">Username</h1>
-							<input type="text" id="username" name="user_name">
+							<input type="text" id="username" name="user_name" required>
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">First name</h1>
-							<input type="text" id="first_name" name="first_name">
+							<input type="text" id="firstname" name="firstname" minlength="2" required/>
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Email</h1>
-							<input type="email" id="email" name="email">
+							<input type="email" id="email" name="email" required>
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Password</h1>
-							<input type="password" id="password" name="password">
+							<input type="password" id="password" name="password" minlength="3" required>
 						</div>
 						<div class="field">
 							<h1 style="font-size:100%;">Re-type Password</h1>
-							<input type="password" id="password" name="confirm">
+							<input type="password" id="password" name="confirm" minlength="3" required>
 						</div>
 					</div>
 					<ul class="actions">
 						<li><input style="margin-left: 80px;" type="submit" value="Sign UP" name="sign_up" class="primary" /></li>
-						<div id="message" style="padding-left: 3rem;">hello</div>
-						<?php
-						   if(isset($_POST['sign_up'])){
-								  $user_name=$_POST['user_name'];
-								  $first_name=$_POST['first_name'];
-								  $email=$_POST['email'];
-								  $pass=$_POST['password'];
-								  $query="INSERT INTO artist_info(user_name, first_name ,email, password, paths) VALUES('$user_name','$first_name','$email','$pass','ran ')";
-
-									if (@mysqli_query($dbc,$query)) {
-					 					print '<p>Your account created successfaully!</p>';
-					 				} else {
-					 					print '<p >fill all the required fields<b>'.mysqli_error($dbc).'</b>
-					 					<p>The query being run was: '.$query.'</p>';
-					 				}
-					 			}
-						?>
+						<div id="message" style="padding-left: 3rem;">
+            <?php
+             if(isset($_POST['sign_up'])){
+              $user_name=$_POST['user_name'];
+              $first_name=$_POST['first_name'];
+              $email=$_POST['email'];
+              $pass=$_POST['password'];
+              $conpass=$_POST['confirm'];
+              //check username --not empty -- not less than 2 --
+              if (($user_name != null && strlen($user_name) > 2)) {
+                $scale = $scale && true;
+              }else{
+                $scale = false;
+                print"enter a valid username ";
+                }
+              //check first name -- not empty -- not less than 2 -- not consisting of numbers--
+              if ($first_name!= null && strlen($first_name) > 2) {
+                $scale = $scale && true;
+              }else {
+                  $scale = false;
+                  print"enter a valid first name";
+                }
+              //check the match of the password
+              if ($pass == $conpass){
+                $scale = $scale && true;
+              }else{
+                $scale = false;
+                print"enter a valid password";
+              }
+              //check if scale is true
+              if ($scale == true){
+              $query="INSERT INTO artist_info(user_name, first_name ,email, password, paths) VALUES('$user_name','$first_name','$email','$pass','ran ')";
+            }
+            if (@mysqli_query($dbc,$query)) {
+            print '<p>Your account created successfaully!</p>';
+            }
+            }
+            ?>
+            </div>
 					</ul>
 				</form>
 			</article>
 
 			<!-- Elements -->
-			<article id="elements">
+			<!-- <article id="elements">
 				<h2 class="major">Elements</h2>
 
 				<section>
@@ -164,14 +188,12 @@
 						Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
 					<h4>Preformatted</h4>
 					<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+          while (!deck.isInOrder()) {
+          print 'Iteration ' + i;
+          deck.shuffle();
+          i++;
+          }
+          print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				</section>
 
 				<section>
@@ -384,7 +406,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					</form>
 				</section>
 
-			</article>
+			</article> -->
 
 		</div>
 
@@ -399,11 +421,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	<div id="bg"></div>
 
 	<!-- Scripts -->
-	<script src="assets2/js/jquery.min.js"></script>
-	<script src="assets2/js/browser.min.js"></script>
-	<script src="assets2/js/breakpoints.min.js"></script>
-	<script src="assets2/js/util.js"></script>
-	<script src="assets2/js/main.js"></script>
+  <script src="assets2/js/jquery.min.js"></script>
+  <script src="assets2/js/jquery.validate.min.js"></script>
+
+	<script src="assets2/js/browser.min.js"></script> <!--for the broweser transitions-->
+	<script src="assets2/js/breakpoints.min.js"></script><!--nothing works without it-->
+	<!-- <script src="assets2/js/util.js"></script> -->
+	<script src="assets2/js/main.js"></script><!--nothing works without it-->
 
 </body>
 
