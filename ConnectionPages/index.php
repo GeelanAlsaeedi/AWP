@@ -84,7 +84,7 @@
 
 			<article id="SignIn">
 			<h2 class="major">Sign in</h2>
-				<form style=" margin-left: 0px;" action="index.php" method="post">
+				<form style=" margin-left: 0px;" action="index.php#SignIn" method="post">
 					<label style="font-size:100%;" for="userName">User Name</label>
 					<input type="text" id="userName" name="userName">
 					<label style=" margin-top: 20px; font-size:100%;" for="lname">Password</label>
