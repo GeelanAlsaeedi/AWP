@@ -84,7 +84,7 @@
 
 			<article id="SignIn">
 			<h2 class="major">Sign in</h2>
-				<form style=" margin-left: 0px;" action="ProfilePage.php" method="post">
+				<form style=" margin-left: 0px;" action="index.php" method="post">
 					<label style="font-size:100%;" for="userName">User Name</label>
 					<input type="text" id="userName" name="userName">
 					<label style=" margin-top: 20px; font-size:100%;" for="lname">Password</label>
@@ -109,18 +109,17 @@
 
 				  if ($r=mysqli_query($dbc, $query)){
 					// Retrieve and print every record:
-					while ($row = mysqli_fetch_array($r)) {
+					while ($row = mysqli_fetch_assoc($r)) {
 
-					 //print"<p><h3>{$row['user_name']}</h3></p>";
 					  session_start();
-					  $_SESSION['loggedin'] = true;
-					  $_SESSION['userName'] = $userName;
+					  $_SESSION['loggedIn'] = true;
+					  $_SESSION['userName'] = $row['user_name'];
 
 					  header('Location: ProfilePage.php');
 					  exit();
 					}
-				  }
-				   print '<p>User name or password incorrect</p>';
+				  }else{
+				  print '<p>User name or password incorrect</p>';}
 				   
 			    }else{
 			  print'<p> Please fill all the required fieleds</p>';
