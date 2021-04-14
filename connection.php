@@ -10,7 +10,7 @@
 
 	 }else{// Handle the error if the database couldn't be selected:
 		 die('<p> Could not select the database because:<b>'.mysqli_error($dbc).'</b></p>');
-		 $dbc = FALSE;
+
 	 }
 
 	}else {

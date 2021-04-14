@@ -95,9 +95,9 @@
 					<input style=" font-size:100%; margin-top: 30px;" type="submit" value="Sign In"  name="sign_in" class="primary" />
           <div id="message" style="padding-left: 3rem;">
           <?php
-          if (isset($_POST['sign_in'])){
+		    if (isset($_POST['sign_in'])){
 
-			 if((!empty($_POST['userName'])) && (!empty($_POST['password']))){
+				if((!empty($_POST['userName'])) && (!empty($_POST['password']))){
 				  $userName=$_POST['userName'];
 				  $password=$_POST['password'];
 
@@ -109,26 +109,28 @@
 
 				  if ($r=mysqli_query($dbc, $query)){
 					// Retrieve and print every record:
-					while ($row = mysqli_fetch_assoc($r)) {
+					while ($row = mysqli_fetch_array($r)) {
 
+					 //print"<p><h3>{$row['user_name']}</h3></p>";
 					  session_start();
-					  $_SESSION['loggedIn'] = true;
-					  $_SESSION['userName'] = $row['user_name'];
+					  $_SESSION['loggedin'] = true;
+					  $_SESSION['userName'] = $userName;
 
 					  header('Location: ProfilePage.php');
 					  exit();
 					}
-				  }else{
-				  print '<p>User name or password incorrect</p>';}
+				  }
+				   print '<p>User name or password incorrect</p>';
 				   
-			    }else{
-			  print'<p> Please fill all the required fieleds</p>';
-			 }
-            }
-        ?>
-        </div>
-        </form>
-			</article>
+				}else{
+				print'<p> Please fill all the required fieleds</p>';
+				}
+			}
+            ?>
+			
+             </div>
+             </form>
+		   </article>
 
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
@@ -174,7 +176,7 @@
                 print"enter a valid username \n";
                 }
               //check first name -- not empty -- not less than 2 -- not consisting of numbers--
-              if ($first_name!= null && strlen($first_name) > 2 && is_numeric($first_name)==false) {
+              if (($first_name!= null) && (strlen($first_name) > 2) && (is_numeric($first_name)==false)) {
                 $scale = $scale && true;
               }else {
                   $scale = false;

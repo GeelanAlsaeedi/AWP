@@ -1,0 +1,96 @@
+*{
+	direction:ltr;
+}
+#logo{
+	width:130px;
+	height:auto;
+}
+.navbar-expand-lg{
+	height:95px;
+}
+.navbar-brand{
+	font-size:30px;
+	margin-left:20px;
+}
+body{
+	background-color:#F2EDD8;
+}
+.col-lg-4 {
+	margin-top:20px;
+	height:460px;
+	   
+}
+	  
+.col-lg-4 img{
+	width:250px;
+	height:300px;
+}
+	  
+.thumbnil{
+	width:98%;
+	margin:10px;
+	height:460px;
+	border-radius:2px;
+	border:5px solid #5D4C46;
+}
+h2{
+	color:#E45641;
+	margin-top:50px;
+}
+p{
+	color:#E45641;
+	font-size:20px;
+}
+#ti{
+	font-size:24px;
+	color:5D4C46;
+}
+#val{
+	color:#ffffff;
+}
+label{
+	color:#5D4C46;
+}
+.form-group{
+	text-align:right;
+}
+.form-control{
+	height:50px;
+}
+td{
+	color:#5D4C46;
+}
+#hello{
+	margin-top:50px;
+	height:460px;
+	border-radius:2px;
+	border:1px solid #F1A94E;
+	text-align:center;
+}
+#goal{
+	text-align:center;
+	margin:auto;
+	background-color:#ffffff;
+	width:50%;
+	margin-top:50px;
+}
+#social{
+	text-align:center;
+	width:50%;
+	margin:auto;
+	margin-top:70px;
+}
+#social img{
+	height:50px;
+	width:50px;
+	margin-left:20px;
+}
+footer{
+	height:90px;
+	background-color:#7B8D8E;
+}
+footer p{
+	color:#ffffff;
+	padding-top:30px;
+	font-size:20px;
+}
