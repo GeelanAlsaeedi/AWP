@@ -1,10 +1,16 @@
 <?php
-
+include'../connection.php';
 ini_set('display_errors',1);
 error_reporting(E_ALL & ~E_NOTICE);
 
 session_start();
-?>
+
+$query="SELECT * FROM artist_info WHERE user_name='$userName'";
+
+$row['user_name'];
+ ?>
+ 
+ 
 <html>
 	<head>
 		<title>Vincent Willem van Gogh </title>
@@ -48,7 +54,16 @@ session_start();
 							<div class="items">
 
 								<div class="item intro span-2">
-                                    <h1 style="font-size:45px; font-family: 'Source Sans Pro" 5 Free';" > Vincent Willem van Gogh </h1>
+								
+								<h1  style="font-size:45px; font-family: 'Source Sans Pro" 5 Free'"; class="username">
+          <?php
+          	$userName=$_POST['userName'];
+            echo $userName;
+           ?>
+            's Photo
+          </h1>
+		   
+                         
 
                                 </div>
 

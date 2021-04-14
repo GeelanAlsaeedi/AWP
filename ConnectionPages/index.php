@@ -84,7 +84,7 @@
 
 			<article id="SignIn">
 			<h2 class="major">Sign in</h2>
-				<form style=" margin-left: 0px;" action="index.php#SignIn" method="post">
+				<form style=" margin-left: 0px;" action="index.php" method="post">
 					<label style="font-size:100%;" for="userName">User Name</label>
 					<input type="text" id="userName" name="userName">
 					<label style=" margin-top: 20px; font-size:100%;" for="lname">Password</label>
@@ -97,36 +97,34 @@
           <?php
           if (isset($_POST['sign_in'])){
 
-            if((!empty($_POST['userName'])) && (!empty($_POST['password']))){
-              $userName=$_POST['userName'];
-              $password=$_POST['password'];
+			 if((!empty($_POST['userName'])) && (!empty($_POST['password']))){
+				  $userName=$_POST['userName'];
+				  $password=$_POST['password'];
 
-              // To protect MySQL injection (more detail about MySQL injection)
-              $userName = stripslashes($userName);
-              $password = stripslashes($password);
+				  // To protect MySQL injection (more detail about MySQL injection)
+				  $userName = stripslashes($userName);
+				  $password = stripslashes($password);
 
-              $query="SELECT * FROM artist_info WHERE user_name='$userName' AND password='$password'";
+				  $query="SELECT * FROM artist_info WHERE user_name='$userName' AND password='$password'";
 
-              if ($r=mysqli_query($dbc, $query)){
-                // Retrieve and print every record:
-                //print '<p>Your loged in successfaully!</p>';
-                while ($row = mysqli_fetch_array($r)) {
+				  if ($r=mysqli_query($dbc, $query)){
+					// Retrieve and print every record:
+					while ($row = mysqli_fetch_assoc($r)) {
 
-                 //print"<p><h3>{$row['user_name']}</h3></p>";
-                  session_start();
-                  $_SESSION['loggedin'] = true;
-                  $_SESSION['userName'] = $userName;
+					  session_start();
+					  $_SESSION['loggedIn'] = true;
+					  $_SESSION['userName'] = $row['user_name'];
 
-                  header('Location: ProfilePage.php');
-                  exit();
-                }
-              }
-               print '<p>User name or password incorrect</p>';
-
-            }else{
-              print'<p> Please fill all the required fieleds</p>';
+					  header('Location: ProfilePage.php');
+					  exit();
+					}
+				  }else{
+				  print '<p>User name or password incorrect</p>';}
+				   
+			    }else{
+			  print'<p> Please fill all the required fieleds</p>';
+			 }
             }
-          }
         ?>
         </div>
         </form>
@@ -135,7 +133,7 @@
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
 				<h2 class="major">Sign up</h2>
-                  <form method="post" action="index.php#SginUp" name="registration">
+                  <form method="post" action="index.php" name="registration">
         	<div class="fields">
 					<div class="field">
 							<h1 style="font-size:100%;">Username</h1>
@@ -196,12 +194,19 @@
             if (@mysqli_query($dbc,$query)) {
             print '<p>Your account created successfaully!</p>';
             }
+
+           //create folder every time a new user sign up 2
+           if (!file_exists($user_name))/* Check folder exists or not */{
+              @mkdir($user_name, 0777);/* Create folder by using mkdir function */
+            }
             }
             ?>
             </div>
 					</ul>
 				</form>
 			</article>
+
+
 
 			<!-- Elements -->
 			<!-- <article id="elements">
