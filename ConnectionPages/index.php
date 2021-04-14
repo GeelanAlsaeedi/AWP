@@ -84,7 +84,7 @@
 
 			<article id="SignIn">
 			<h2 class="major">Sign in</h2>
-				<form style=" margin-left: 0px;" action="index.php#SignIn" method="post">
+				<form style=" margin-left: 0px;" action="ProfilePage.php" method="post">
 					<label style="font-size:100%;" for="userName">User Name</label>
 					<input type="text" id="userName" name="userName">
 					<label style=" margin-top: 20px; font-size:100%;" for="lname">Password</label>
@@ -135,7 +135,7 @@
 			<!-- Sign up was SginUp -->
 			<article id="SginUp">
 				<h2 class="major">Sign up</h2>
-                  <form method="post" action="index.php#SginUp" name="registration">
+                  <form method="post" action="index.php" name="registration">
         	<div class="fields">
 					<div class="field">
 							<h1 style="font-size:100%;">Username</h1>
@@ -196,12 +196,19 @@
             if (@mysqli_query($dbc,$query)) {
             print '<p>Your account created successfaully!</p>';
             }
+
+           //create folder every time a new user sign up 2
+           if (!file_exists($user_name))/* Check folder exists or not */{
+              @mkdir($user_name, 0777);/* Create folder by using mkdir function */
+            }
             }
             ?>
             </div>
 					</ul>
 				</form>
 			</article>
+
+
 
 			<!-- Elements -->
 			<!-- <article id="elements">
