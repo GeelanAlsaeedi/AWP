@@ -76,7 +76,7 @@ session_start();
     <div class="row">
       <div class="header-logo">
         <a class="site-logo" href="index.html">
-          <img src="../LINE ART LOGO 2 (2).png" alt="Homepage">
+          <img src="../LINE ART LOGO white.png" alt="Homepage">
         </a>
       </div>
 
@@ -113,10 +113,12 @@ session_start();
         <div class="home-content__left">
           <!-- recive the user name from the index.php page  -->
           <h1 class="username">
-          <?php
-          	$userName=$_POST['userName'];
-            echo $userName;
-           ?>
+            <a href="#edits"> Gee
+          <!-- <?php
+          	// $userName=$_POST['userName'];
+            // echo $userName;
+           ?> -->
+         </a>
             's Profile
           </h1>
 
@@ -210,7 +212,20 @@ session_start();
     </a>
 
   </section> <!-- end s-home -->
-
+  <article id="edits">
+    <h2 class="major">Sign up</h2>
+              <form method="post" action="" name="Edit">
+      <div class="fields">
+      <div class="field">
+          <h1 style="font-size:100%;">Change Your Username</h1>
+          <input type="text" id="newusername" name="new_user_name" required>
+        </div>
+      </div>
+      <ul class="actions">
+        <li><input style="margin-left: 80px;" type="submit" value="Save Changes" name="save_up" class="primary" /></li>
+      </ul>
+    </form>
+  </article>
 
   <!-- styles
     ================================================== -->
