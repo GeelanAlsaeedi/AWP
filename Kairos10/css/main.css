@@ -225,7 +225,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: red;
+  color: white;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -233,7 +233,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: #000000;
+  color: rgb(80,14,14);
 }
 
 a:hover,
@@ -2361,7 +2361,7 @@ input::-moz-focus-inner {
   height: 5.6rem;
   width: 5.6rem;
   background-color: rgba(255, 255, 255, 0.05);
-  background-image: url(../images/icons/icon-arrow-down.svg);
+  background-image: url(../images3/icons/icon-arrow-down.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 10px 15px;
@@ -3762,11 +3762,11 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-download .download-badges li a.badge-appstore {
-  background-image: url("../images/appstore.png");
+  background-image: url("../images3/appstore.png");
 }
 
 .s-download .download-badges li a.badge-googleplay {
-  background-image: url("../images/google-play.png");
+  background-image: url("../images3/google-play.png");
 }
 
 .s-download .download-bottom-image {
@@ -3902,7 +3902,7 @@ html.no-csstransitions .home-content__main {
   font-size: 1.8rem;
   line-height: 3.2rem;
   padding: 1.8rem 140px 1.8rem 64px;
-  background: url(../images/icons/icon-mail.svg) 24px center no-repeat, rgba(255, 255, 255, 0.03);
+  background: url(../images3/icons/icon-mail.svg) 24px center no-repeat, rgba(255, 255, 255, 0.03);
   background-size: 24px 16px, auto;
   color: white;
   margin-bottom: 2rem;
@@ -4102,7 +4102,7 @@ html.no-csstransitions .home-content__main {
   width: 5.6rem;
   line-height: 5.6rem;
   text-align: center;
-  background-image: url(../images/icons/icon-arrow-up.svg);
+  background-image: url(../images3/icons/icon-arrow-up.svg);
   background-color: #000000;
   background-repeat: no-repeat;
   background-position: center center;
