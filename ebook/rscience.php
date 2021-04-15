@@ -3,6 +3,7 @@ include'inc/conn.php';
 session_start();
 if($_SESSION['check']==0)
 	header("Location:index.php");
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,10 +19,25 @@ if($_SESSION['check']==0)
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<style type="text/css">
+	body {
+<?php // Script 9.2 - view_settings.php
+// Address error handing.
+ini_set ('display_errors', 1);
+error_reporting (E_ALL & ~E_NOTICE);
+// Check for a bg_color value.
+if (isset ($_COOKIE['bg_color'])) {
+	print "\t\tbackground-color: {$_COOKIE['bg_color']};\n";
+} else {
+	print "\t\tbackground-color: #F2F2F2;\n";
+}
+?>
+	}
+</style>
   </head>
   <body>
 	<header>
-	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B8D8E;">
+	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:RGB(157,183,191);">
 	  <img src="img/logo.png" id="logo" alt="logo" />
 	  <a class="navbar-brand" href="#"><b>إثراء</b></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,12 +86,9 @@ if($_SESSION['check']==0)
 			 <?php
 			 echo'</div>
 			</div>';
-		 }?>	
+		 }?>
 		</div>
 	</div>
 	<br><br>
-	<footer style="margin-top:40px;">
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

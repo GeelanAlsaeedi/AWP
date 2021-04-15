@@ -18,7 +18,7 @@ include'inc/conn.php';
   </head>
   <body>
 	<header>
-	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B8D8E;">
+	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:RGB(157,183,191);">
 	  <img src="img/logo.png" id="logo" alt="logo" />
 	  <a class="navbar-brand" href="#"><b>إثراء</b></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@ include'inc/conn.php';
 	<div class="container">
 		<div class="row">
 		 <div class="col-lg-12 col-md-12 col-sm-12" id="hello">
-			
+
 			 <h1 style="color:#44B3C2; margin-top:30px;" ><b>مرحبا بكم !</b></h1><hr>
 			 <p id="goal">نحن في إثراء نهدف إلى تثقيف مجتمعاتنا العربية بتسهيل وتوفير الكتب الإلكترونية بشتى مجالاتها المتنوعة والمختلفة، ونسعد بانضمامكم إلينا.</p>
 			 <div id="social">
@@ -66,8 +66,5 @@ include'inc/conn.php';
 		</div>
 	</div>
 	<br><br>
-	<footer style="margin-top:8px;">
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

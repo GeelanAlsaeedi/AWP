@@ -1,6 +1,15 @@
 <?php
 include'inc/conn.php';
 session_start();
+$cookies = FALSE;
+   if(isset($_POST['theme']))
+   {
+    setcookie ('bg_color', $_POST['theme']);
+    // setcookie ('font_color', $_POST['theme']);
+     $cookies = TRUE;
+   }else {
+     setcookie ('bg_color', "");
+   }
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +28,7 @@ session_start();
   </head>
   <body>
 	<header>
-	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B8D8E;">
+	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:RGB(157,183,191);">
 	  <img src="img/logo.png" id="logo" alt="logo" />
 	  <a class="navbar-brand" href="#"><b>إثراء</b></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,12 +72,16 @@ session_start();
               <label for="exampleInputPassword1">كلمة المرور</label>
               <input type="password" class="form-control" name="pass" id="exampleInputPassword1" placeholder="كلمة المرور" style="height:50px;">
              </div>
-             <input  type="submit" name="signin" value="تسجيل الدخول" class="btn btn-info" />
+             <label class="switch">
+               <input class="btn-toggle" type="checkbox" name="theme" value="#34323D">
+               <span class="slider round"></span>
+             </label>
+             <input type="submit" name="signin" value="تسجيل الدخول" class="btn btn-info" style="margin-top: 35px;margin-right: 15px;">
+
 			 <?php
-			   
-			   if(isset($_POST['signin'])){
+        if(isset($_POST['signin'])){
 				$user=$_POST['user'];
-                $pass=$_POST['pass'];				
+                $pass=$_POST['pass'];
 			    $sql="select * from users where username='$user' and password='$pass'";
 				$ret=mysqli_query($connection,$sql);
 				while($res=mysqli_fetch_assoc($ret)){
@@ -80,13 +93,10 @@ session_start();
 				echo'<center><p>البيانات غير صحيحة</p></center>';			   }
 			 ?>
 		   </form>
-		</div> 
+		</div>
 		<hr><br>
 		<center><p style="font-size:20px;">إذا لم تكن مسجلا فبادر الآن!</p></center>
 		<center><a href="signup.php"><input  type="submit" value="سجل!" class="btn btn-Success" /></a></center>
 	</div>
-	<footer style="margin-top:125px;">
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

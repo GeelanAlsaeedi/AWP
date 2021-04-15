@@ -10,10 +10,10 @@ $ret=mysqli_query($connection,$sql);
 while($res=mysqli_fetch_assoc($ret)){
    $name=$res['name'];
    $author=$res['author'];
-   $cat=$res['category']; 
-   $pages=$res['pages']; 
+   $cat=$res['category'];
+   $pages=$res['pages'];
    $descrip=$res['descrip'];
-   $pic=$res['img'];     
+   $pic=$res['img'];
 }
 ?>
 <!DOCTYPE html>
@@ -30,10 +30,25 @@ while($res=mysqli_fetch_assoc($ret)){
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<style type="text/css">
+	body {
+<?php // Script 9.2 - view_settings.php
+// Address error handing.
+ini_set ('display_errors', 1);
+error_reporting (E_ALL & ~E_NOTICE);
+// Check for a bg_color value.
+if (isset ($_COOKIE['bg_color'])) {
+	print "\t\tbackground-color: {$_COOKIE['bg_color']};\n";
+} else {
+	print "\t\tbackground-color: #F2F2F2;\n";
+}
+?>
+	}
+</style>
   </head>
   <body>
 	<header>
-	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B8D8E;">
+	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:RGB(157,183,191);">
 	  <img src="img/logo.png" id="logo" alt="logo" />
 	  <a class="navbar-brand" href="#"><b>إثراء</b></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,9 +85,9 @@ while($res=mysqli_fetch_assoc($ret)){
 	    <div class="row">
 		   <div class="col-lg-6 col-md-6">
 		    <img src="img/<?php echo $pic; ?>" style="width:80%; height:auto;" /></center>
-		   </div>   
-		    <div class="col-lg-6 col-md-6"> 
-		      
+		   </div>
+		    <div class="col-lg-6 col-md-6">
+
 		       <center><h1><b style="color:#E45641;"><?php echo $name; ?><b></h1></center>
 			  <div style="background-color:#44B3C2;  padding:5px; border-radius:5px;">
 			     <center>
@@ -90,8 +105,5 @@ while($res=mysqli_fetch_assoc($ret)){
 		</div>
 	</div>
 	<br><br>
-	<footer>
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>
