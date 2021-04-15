@@ -19,7 +19,7 @@ session_start();
   </head>
   <body>
 	<header>
-	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7B8D8E;">
+	 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:RGB(157,183,191);">
 	  <img src="img/logo.png" id="logo" alt="logo" />
 	  <a class="navbar-brand" href="#"><b>إثراء</b></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +33,12 @@ session_start();
 	  </div>
 	   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav mr-auto">
+      <li style="padding-right: 20px;">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+      </li>
 		  <li class="nav-item active">
 			<a class="nav-link" href="login.php">تسجيل الدخول<span class="sr-only">(current)</span></a>
 		  </li>
@@ -66,7 +72,7 @@ session_start();
 			  <center><a href="show.php?id='.$res['id'].'" type="button" class="btn btn-danger">معلومات الكتاب</a></center>
 			 </div>
 			</div>';
-		 }?>	
+		 }?>
 		</div>
 	</div>
 	<br><br>
