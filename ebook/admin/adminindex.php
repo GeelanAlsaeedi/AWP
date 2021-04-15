@@ -53,7 +53,7 @@ if($_SESSION['checkadmin']==0)
 			  <center><a href="add.php" type="button" class="btn btn-danger">انتقل</a></center>
 			 </div>
 			</div>
-			
+
 			<div class="col-lg-4 col-md-12 col-sm-12" style="float:right;">
 			  <div class="thumbnil">
 			  <br>
@@ -63,7 +63,7 @@ if($_SESSION['checkadmin']==0)
 			  <center><a href="books.php" type="button" class="btn btn-danger">انتقل</a></center>
 			 </div>
 			</div>
-			
+
 			<div class="col-lg-4 col-md-12 col-sm-12" style="float:right;">
 			  <div class="thumbnil">
 			  <br>
@@ -76,8 +76,5 @@ if($_SESSION['checkadmin']==0)
 		</div>
 	</div>
 	<br><br>
-	<footer style="margin-top:13px;">
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

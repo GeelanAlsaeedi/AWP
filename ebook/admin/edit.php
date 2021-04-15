@@ -9,7 +9,7 @@ $ret=mysqli_query($connection,$sql);
 while($res=mysqli_fetch_assoc($ret)){
 	$name=$res['name'];
     $author=$res['author'];
-    $cat=$res['category']; 
+    $cat=$res['category'];
     $pages=$res['pages'];
     $descrip=$res['descrip'];
     $pic=$res['img'];
@@ -64,7 +64,7 @@ while($res=mysqli_fetch_assoc($ret)){
              <div class="form-group">
               <label for="exampleInputPassword1" class="black">اسم المؤلف</label>
               <input type="text" name="author" class="form-control" id="exampleInputPassword1" value="<?php echo $author; ?>">
-             </div> 
+             </div>
 			 <div class="form-group">
               <label for="exampleInputPassword1" class="black">الفئة</label>
                <select name="cat">
@@ -132,8 +132,5 @@ while($res=mysqli_fetch_assoc($ret)){
 		   </div>
 		</div>
 	</div>
-	<footer>
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

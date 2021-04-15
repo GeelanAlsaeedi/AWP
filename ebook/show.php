@@ -89,7 +89,7 @@ if (isset ($_COOKIE['bg_color'])) {
 		    <div class="col-lg-6 col-md-6">
 
 		       <center><h1><b style="color:#E45641;"><?php echo $name; ?><b></h1></center>
-			  <div style="background-color:#44B3C2;  padding:5px; border-radius:5px;">
+			  <div style="background-color:RGB(157,183,191);  padding:5px; border-radius:5px;">
 			     <center>
 					<p id="ti">اسم المؤلف:</p>
 				    <p id="val"><?php echo $author; ?></p>

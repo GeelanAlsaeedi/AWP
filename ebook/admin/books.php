@@ -74,8 +74,5 @@ if($_SESSION['checkadmin']==0)
 		   </div>
 		</div>
 	</div>
-	<footer>
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

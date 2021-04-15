@@ -42,10 +42,10 @@ session_start();
               <input type="password" class="form-control" name="pass" id="exampleInputPassword1" placeholder="كلمة المرور" style="height:50px;">
              </div>
              <input  type="submit" name="signin" value="تسجيل الدخول" class="btn btn-primary" />
-			 <?php			   
+			 <?php
 			   if(isset($_POST['signin'])){
 				$user=$_POST['user'];
-                $pass=$_POST['pass'];				
+                $pass=$_POST['pass'];
 			    $sql="select * from admins where username='$user' and password='$pass'";
 				$ret=mysqli_query($connection,$sql);
 				while($res=mysqli_fetch_assoc($ret)){
@@ -55,10 +55,7 @@ session_start();
 				echo'<center><p style="color:#ffffff;">البيانات غير صحيحة</p></center>';			   }
 			 ?>
 		   </form>
-		</div>   
+		</div>
 	</div>
-	<footer style="margin-top:260px;">
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
   </body>
 </html>

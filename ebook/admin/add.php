@@ -90,7 +90,7 @@ if($_SESSION['checkadmin']==0)
 					if($ret)
 						echo'تمت عملية الإضافة بنجاح';
 				}
-				else{ 
+				else{
 					echo'حدث خلل ما عند رفع الصورة';
 				}
 		    }
@@ -100,8 +100,5 @@ if($_SESSION['checkadmin']==0)
 	 </div>
 	</div>
 	<br><br>
-	<footer>
-		<center><p>جميع الحقوق محفوظة - الإختبار النهائي 2019</p></center>
-	</footer>
    </body>
 </html>
